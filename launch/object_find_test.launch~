@@ -1,0 +1,11 @@
+<launch>
+   
+   <arg name="image_path"    default="/home/michele/frame0002.png"/>
+    
+    <node pkg="object_find" type="object_find" name="object_find" output="screen">
+        <remap from="/image" to="/kinect2/hd/image_color_rect" />
+        <param name="image_path"       value="$(arg image_path)" />
+    </node>
+
+</launch>
+
